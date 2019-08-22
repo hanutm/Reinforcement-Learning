@@ -1,0 +1,103 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hanutm/Reinforcement-Learning/blob/master/Reinforcement%20Learning%20-%20OpenAI%20gym\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "dZ-x1zrxzBq0",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "import gym\n",
+        "\n",
+        "env = gym.make(\"Taxi-v2\").env\n",
+        "\n"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_Gn7zHdKzNBw",
+        "colab_type": "code",
+        "outputId": "e3e196d1-f113-4556-b19c-cf46592e89a8",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 153
+        }
+      },
+      "source": [
+        "env.render()"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "+---------+\n",
+            "|R: | : :\u001b[35m\u001b[34;1mG\u001b[0m\u001b[0m|\n",
+            "| :\u001b[43m \u001b[0m: : : |\n",
+            "| : : : : |\n",
+            "| | : | : |\n",
+            "|Y| : |B: |\n",
+            "+---------+\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GAOxpx3c0Vvx",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "7df3aec5-3b3c-45ed-a714-3b67c017f938"
+      },
+      "source": [
+        "state = env.encode(1,1,1,1)\n",
+        "print(state)\n",
+        "env.s = state\n"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "125\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
